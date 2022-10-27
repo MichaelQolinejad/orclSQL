@@ -1,0 +1,4 @@
+update assign 
+set 
+hoursassigned = 10 
+where empid = 110 and projno = 1019
