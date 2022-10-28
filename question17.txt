@@ -1,0 +1,7 @@
+ALTER TABLE Project 
+ADD Status varchar2(255);
+UPDATE Project SET Status = 'Completed' WHERE projno = 1001;
+UPDATE Project SET Status = 'Canceled' WHERE projno = 1005;
+UPDATE Project SET Status = 'Active' WHERE mod(projno,2) = 0;
+UPDATE Project SET Status = 'Planned' WHERE status IS NULL;
+SELECT * FROM PROJECT WHERE status = 'Active';
