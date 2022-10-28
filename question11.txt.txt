@@ -1,0 +1,11 @@
+--Add Michael and Marios to the woker table
+INSERT INTO worker VALUES (223884,'Qolinehzhad','Michael',2,'16-JAN-96','28-FEB-21',80000);
+INSERT INTO worker VALUES (313997,'Marios','Riza',2,'16-OCT-98','28-FEB-21',80000);
+--Assign Michael To 2 Projects
+INSERT INTO Assign VALUES (1031,223884,20,1);
+INSERT INTO Assign VALUES (1032,223884,20,1);
+--Assign Marios To 2 Projects
+INSERT INTO Assign VALUES (1001,313997,15,1);
+INSERT INTO Assign VALUES (1005,313997,15,1);
+--view
+SELECT * FROM project_view;
