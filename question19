@@ -1,0 +1,13 @@
+ALTER TABLE Project 
+ADD numEmployeesAssigned int;
+
+UPDATE Project
+SET project.numEmployeesAssigned = 
+(
+SELECT Counting
+FROM (
+    SELECT a.projno, COUNT(a.empid) AS Counting FROM Assign a
+    JOIN Project ON project.projno = a.projno
+    GROUP BY a.projno) t
+WHERE project.projno=t.projno
+);
