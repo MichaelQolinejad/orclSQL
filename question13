@@ -1,0 +1,6 @@
+SELECT a.Projno,a.empid,w.firstname || ' ' || w.lastname AS Employees, p.startdate
+FROM assign a
+JOIN worker w ON w.empid = a.empid
+JOIN project p ON a.projno = p.projno
+WHERE startdate > '01-Sep-21'; 
+
