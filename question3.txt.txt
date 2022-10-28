@@ -1,0 +1,2 @@
+SELECT empid as Worker_ID,firstName||' '|| lastName As Full_Name, TRUNC (Salary/12) as Monthly_Salary
+FROM worker;

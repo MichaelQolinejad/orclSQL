@@ -1,0 +1,6 @@
+
+SELECT firstName||' '|| lastName As Full_Name, departmentname as Department_Name
+FROM worker 
+JOIN assign ON worker.empid=assign.empid 
+JOIN dept ON dept.departmentid=worker.departmentid
+WHERE projno = '1019';

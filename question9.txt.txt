@@ -1,0 +1,7 @@
+CREATE VIEW Project_View AS
+ SELECT a.projno AS Project_Number,p.projname AS Project_Name,w.empid AS Employee_ID,w.firstName||' '|| w.lastName AS Asignee_Name
+ FROM assign a
+ JOIN worker w ON a.empid=w.empid
+ JOIN project p ON a.projno= p.projno;
+ 
+SELECT * FROM project_view;

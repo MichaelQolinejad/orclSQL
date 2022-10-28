@@ -1,0 +1,4 @@
+SELECT FirstName ||' '|| LastName AS Accontant_Employee
+FROM worker JOIN dept
+ON worker.departmentid=dept.departmentid
+WHERE departmentname = 'Accounting';

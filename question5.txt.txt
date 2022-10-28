@@ -1,0 +1,8 @@
+SELECT firstName||' '|| lastName As Full_Name, salary
+FROM worker JOIN dept
+On worker.departmentid=dept.departmentid
+WHERE departmentname = 'Research'
+and salary = (select min(salary) 
+              from worker JOIN dept 
+              ON worker.departmentid=dept.departmentid 
+              where departmentname = 'Research');
