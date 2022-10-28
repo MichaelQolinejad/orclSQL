@@ -1,0 +1,5 @@
+SELECT w.firstname || ' ' || w.lastname AS Employees, w1.firstname || ' ' || w1.lastname AS Dep_Manager                                                      
+FROM worker w
+JOIN dept d ON d.departmentid= w.departmentid
+JOIN worker w1 ON d.mgrid= w1.empid
+WHERE w.empid NOT IN (select empid from assign);
