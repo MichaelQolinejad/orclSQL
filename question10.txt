@@ -1,3 +1,3 @@
-select projno,projname 
-from view.proj
-where empid = 101 
+select project_number,project_name
+from project_view
+where employee_id = 101 
